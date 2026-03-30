@@ -34,8 +34,6 @@ static int kvm_setup_cpuid(int vcpufd, int id) {
     struct kvm_cpuid_entry2 *e = &cpuid.entries[i];
     if (e->function == 1) {
       e->ebx = (e->ebx & 0x00ffffff) | ((u32)id << 24);
-      fprintf(stderr, "cpuid[%d]: leaf=1 ebx=0x%08x (apicid=%d)\n",
-              id, e->ebx, id);
     }
     if (e->function == 0xb || e->function == 0x1f)
       e->edx = id;

@@ -2,7 +2,7 @@
 #define _VS_MMIO_H
 
 #include "vsandbox.h"
-#include "hw/device.h"
+#include "device.h"
 
 struct mmio_dev {
   struct mmio_dev *next;

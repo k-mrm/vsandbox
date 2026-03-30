@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
-#include "hw/mmio.h"
+#include "mmio.h"
 
 struct mmio_bus *create_mmio_bus(void) {
   struct mmio_bus *bus;

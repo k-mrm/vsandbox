@@ -2,7 +2,7 @@
 #define _VS_PIO_H
 
 #include "vsandbox.h"
-#include "hw/device.h"
+#include "device.h"
 
 struct pio_dev {
   struct pio_dev *next;

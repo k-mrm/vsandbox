@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
-#include "hw/device.h"
-#include "hw/pio.h"
+#include "device.h"
+#include "pio.h"
 
 #define PCI_ADDR_PORT   0xCF8
 #define PCI_PORT_END    0xD00

@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "hw/device.h"
-#include "hw/pio.h"
+#include "device.h"
+#include "pio.h"
 
 #define CMOS_PORT_BASE  0x70
 #define CMOS_PORT_END   0x72

@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
-#include "hw/device.h"
-#include "hw/pio.h"
+#include "device.h"
+#include "pio.h"
 #include "vm.h"
 
 #define KBD_DATA_PORT  0x60

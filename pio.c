@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
-#include "hw/pio.h"
+#include "pio.h"
 
 struct pio_bus *create_pio_bus(void) {
   struct pio_bus *bus;

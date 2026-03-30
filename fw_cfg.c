@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <arpa/inet.h>
 #include "vm.h"
-#include "hw/device.h"
-#include "hw/pio.h"
+#include "device.h"
+#include "pio.h"
 
 /* fw_cfg selector keys */
 #define FW_CFG_SIGNATURE    0x0000
@@ -130,9 +130,6 @@ static void getcfg(struct fw_cfg *cfg, void *data, u32 len) {
     break;
   }
   case FW_CFG_FILE_DIR:
-    if (cfg->off == 0)
-      fprintf(stderr, "fw_cfg: reading FILE_DIR blob_len=%u nfiles=%d\n",
-              cfg->dir_blob_len, cfg->nfiles);
     cfgcopy(data, cfg->off, cfg->dir_blob, len, cfg->dir_blob_len);
     break;
   default:
@@ -163,7 +160,6 @@ static int fw_cfg_write(struct device *dev, u32 offset, void *d, u32 size) {
   if (offset == FW_CFG_OFF_SEL && size == 2) {
     cfg->sel = *(u16 *)d;
     cfg->off = 0;
-    fprintf(stderr, "fw_cfg: sel=0x%04x (nfiles=%d)\n", cfg->sel, cfg->nfiles);
   }
   return 0;
 }

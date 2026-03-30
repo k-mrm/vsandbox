@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
-#include "hw/device.h"
-#include "hw/pio.h"
+#include "device.h"
+#include "pio.h"
 
 #define PIC_MASTER_BASE  0x20
 #define PIC_MASTER_END   0x22

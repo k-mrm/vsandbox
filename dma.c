@@ -1,6 +1,6 @@
 #include <stdlib.h>
-#include "hw/device.h"
-#include "hw/pio.h"
+#include "device.h"
+#include "pio.h"
 
 /* DMA controller ports: 0x00-0x0F (primary), 0xC0-0xDF (secondary),
    page registers 0x80-0x8F, plus misc 0xD0-0xDA */

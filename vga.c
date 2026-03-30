@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
-#include "hw/device.h"
-#include "hw/pio.h"
+#include "device.h"
+#include "pio.h"
 
 #define VGA_CRTC_ADDR   0x3D4
 #define VGA_CRTC_END    0x3D6

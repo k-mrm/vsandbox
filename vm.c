@@ -3,6 +3,17 @@
 #include "vm.h"
 #include "vcpu.h"
 #include "backend.h"
+#include "device.h"
+
+static int sink_read(struct device *dev, u32 off, void *d, u32 sz) {
+  (void)dev; (void)off; (void)sz;
+  *(u8 *)d = 0;
+  return 0;
+}
+static int sink_write(struct device *dev, u32 off, void *d, u32 sz) {
+  (void)dev; (void)off; (void)d; (void)sz;
+  return 0;
+}
 
 struct vm *create_vm(struct vmconfig *cfg) {
   struct vm *vm;
@@ -30,7 +41,6 @@ struct vm *create_vm(struct vmconfig *cfg) {
   pit_init(vm->pio);
   cmos_init(vm->pio, cfg->memsz >> 20);
   sysctl_init(vm->pio);
-  debugcon_init(vm->pio);
   pci_init(vm->pio);
   dma_init(vm->pio);
   pic_init(vm->pio);
@@ -38,6 +48,8 @@ struct vm *create_vm(struct vmconfig *cfg) {
   ata_init(vm->pio);
   lpt_init(vm->pio);
   vga_init(vm->pio);
+  pio_register(vm->pio, 0x402, 0x403,
+               new_device(sink_read, sink_write, NULL));
   ioapic_init(vm->mmio);
   lapic_init(vm->mmio);
   vm->fw_cfg = fw_cfg_init(vm);

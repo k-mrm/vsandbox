@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "hw/device.h"
-#include "hw/pio.h"
+#include "device.h"
+#include "pio.h"
 
 /* primary 0x1F0-0x1F7, control 0x3F6-0x3F7 */
 /* secondary 0x170-0x177, control 0x376-0x377 */

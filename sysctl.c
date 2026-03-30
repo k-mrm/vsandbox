@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
-#include "hw/device.h"
-#include "hw/pio.h"
+#include "device.h"
+#include "pio.h"
 
 #define SYSCTL_PORT  0x92
 #define SYSCTL_END   0x93

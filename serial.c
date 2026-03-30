@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include "hw/device.h"
-#include "hw/pio.h"
+#include "device.h"
+#include "pio.h"
 
 #define SERIAL_PORT_SIZE  8
 #define NUM_COM_PORTS     4

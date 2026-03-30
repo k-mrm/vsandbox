@@ -2,8 +2,8 @@
 #define _VS_VM_H
 
 #include "vsandbox.h"
-#include "hw/pio.h"
-#include "hw/mmio.h"
+#include "pio.h"
+#include "mmio.h"
 
 struct vcpu;
 struct fw_cfg;
@@ -43,7 +43,6 @@ void legacy_serial(struct pio_bus *bus);
 void pit_init(struct pio_bus *bus);
 void cmos_init(struct pio_bus *bus, u32 mem_mb);
 void sysctl_init(struct pio_bus *bus);
-void debugcon_init(struct pio_bus *bus);
 void pci_init(struct pio_bus *bus);
 void dma_init(struct pio_bus *bus);
 void pic_init(struct pio_bus *bus);

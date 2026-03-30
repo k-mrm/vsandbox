@@ -2,8 +2,8 @@
 #include <string.h>
 #include <stdio.h>
 #include "vm.h"
-#include "hw/device.h"
-#include "hw/mmio.h"
+#include "device.h"
+#include "mmio.h"
 
 #define IOAPIC_BASE       0xFEC00000UL
 #define IOAPIC_SIZE       0x1000

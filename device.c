@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
-#include "hw/device.h"
+#include "device.h"
 
 struct device *new_device(int (*read)(struct device *, u32, void *, u32),
                           int (*write)(struct device *, u32, void *, u32),

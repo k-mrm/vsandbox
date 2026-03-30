@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "hw/device.h"
-#include "hw/pio.h"
+#include "device.h"
+#include "pio.h"
 
 #define PIT_PORT_BASE     0x40
 #define PIT_PORT_END      0x44   /* 0x40-0x43 */

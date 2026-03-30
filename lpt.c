@@ -1,6 +1,6 @@
 #include <stdlib.h>
-#include "hw/device.h"
-#include "hw/pio.h"
+#include "device.h"
+#include "pio.h"
 
 /* LPT1: 0x378-0x37F, LPT2: 0x278-0x27F */
 #define LPT1_BASE  0x278

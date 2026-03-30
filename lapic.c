@@ -5,8 +5,8 @@
 #include <pthread.h>
 #include "vm.h"
 #include "vcpu.h"
-#include "hw/device.h"
-#include "hw/mmio.h"
+#include "device.h"
+#include "mmio.h"
 #include "backend.h"
 
 #define LAPIC_BASE        0xFEE00000UL
